@@ -4,11 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h2>Employee Register</h2>
+
+<hr />
+
 <table class="table">
     <thead>
         <tr>
@@ -24,7 +25,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.OfficeLocation)
             </th>
-            <th></th>
+            <th><a asp-action="Create"><i class="fa fa-plus-square-o"> Employee</i></a></th>
         </tr>
     </thead>
     <tbody>
@@ -43,9 +44,8 @@
                 @Html.DisplayFor(modelItem => item.OfficeLocation)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.EmployeeId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EmployeeId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EmployeeId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.EmployeeId"><i class='fas fa-marker'></i></a>
+                <a asp-action="Delete" asp-route-id="@item.EmployeeId"><i class='fas fa-trash-alt' style='color:red'></i></a>
             </td>
         </tr>
 }
